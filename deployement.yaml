@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: myfirstdocker
+  name: myfirstdocker
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: myfirstdocker
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: myfirstdocker
+    spec:
+      containers:
+      - image: benjamin49610/myfirstdocker
+        name: hello-world-php
+        imagePullPolicy: Never  # this is addition
+        resources: {}
+status: {}
